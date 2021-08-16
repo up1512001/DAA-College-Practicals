@@ -195,48 +195,64 @@ public:
 
 int main(){
 
-    // Stack Creation
-    Stack *o1 = new Stack(6);
-    o1->pop();
-    o1->push(10);
-    o1->push(20);
-    o1->pop();
-    o1->push(30);
-    o1->push(40);
-    o1->print();
-
-    // Queue Creation
-    Queue *o2 = new Queue(5);
-    o2->dequeue();
-    o2->enqueue(10);
-    o2->enqueue(20);
-    o2->enqueue(30);
-    o2->enqueue(0);
-    o2->print();
-    o2->dequeue();
-    o2->enqueue(40);
-    o2->enqueue(50);
-    o2->print();
-
-    // Stack Using Queue Creation
-    StackUsingQueue *o3 = new StackUsingQueue(7);
-    o3->popS();
-    o3->pushS(10);
-    o3->pushS(20);
-    o3->pushS(30);
-    o3->print();
-    o3->popS();
-    o3->print();
-
-    // Queue Using Stack Creation
-    QueueUsingStack *o4 = new QueueUsingStack(4);
-    o4->dequeueQ();
-    o4->enqueueQ(10);
-    o4->enqueueQ(20);
-    o4->enqueueQ(30);
-    o4->enqueueQ(40);
-    o4->enqueueQ(50);
-    o4->print();
-    o4->dequeueQ();
-    o4->print();
+    cout<<"1) Stack\n2) Queue\n3) Stack using queue\n4)Queue using stack\n";
+    int c;cin>>c;
+    switch(c){
+        case 1:{
+            // Stack Creation
+            Stack *o1 = new Stack(6);
+            o1->pop();
+            o1->push(10);
+            o1->push(20);
+            o1->pop();
+            o1->push(30);
+            o1->push(40);
+            o1->print();
+            break;
+        }
+        case 2:{
+            // Queue Creation
+            Queue *o2 = new Queue(5);
+            o2->dequeue();
+            o2->enqueue(10);
+            o2->enqueue(20);
+            o2->enqueue(30);
+            o2->enqueue(0);
+            o2->print();
+            o2->dequeue();
+            o2->enqueue(40);
+            o2->enqueue(50);
+            o2->print();
+            break;
+        }
+        case 3:{
+            // Stack Using Queue Creation
+            StackUsingQueue *o3 = new StackUsingQueue(7);
+            o3->popS();
+            o3->pushS(10);
+            o3->pushS(20);
+            o3->pushS(30);
+            o3->print();
+            o3->popS();
+            o3->print();
+            break;
+        }
+        case 4:{
+            // Queue Using Stack Creation
+            QueueUsingStack *o4 = new QueueUsingStack(4);
+            o4->dequeueQ();
+            o4->enqueueQ(10);
+            o4->enqueueQ(20);
+            o4->enqueueQ(30);
+            o4->enqueueQ(40);
+            o4->enqueueQ(50);
+            o4->print();
+            o4->dequeueQ();
+            o4->print();
+            break;
+        }
+    default:
+        cout<<"Enter Valid Number:\n";
+        break;
+    }
 }
