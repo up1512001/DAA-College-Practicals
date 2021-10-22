@@ -32,7 +32,7 @@ void Graph::DFS(int vertex) {
   visited[vertex] = true;
   list<int> adjList = adjLists[vertex];
 
-  cout << vertex << " ";
+  cout << vertex << "\n";
 
   list<int>::iterator i;
   for (i = adjList.begin(); i != adjList.end(); ++i)
